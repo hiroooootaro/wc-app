@@ -1,24 +1,41 @@
-# README
+## usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column          | Type    | Option     |
+|-----------------|---------|------------|
+| nickname        | string  | null: false|
+| first_name      | string  | null: false|
+| last_name       | string  | null: false|
+| email           | string  | null: false|
+| password        | string  | null: false|
 
-Things you may want to cover:
+### Association
+has_many :templates
+has_many :orders
 
-* Ruby version
+## templatesテーブル
 
-* System dependencies
+| Column          | Type    | Option     |
+|-----------------|---------|------------|
+| view_file       | string  | null: false|
+| category        | integer | null: false|
+| image           | string  | null: false|
+| view_name       | string  | null: false|
 
-* Configuration
 
-* Database creation
+### Association
+belongs_to :user
+has_one :order
 
-* Database initialization
 
-* How to run the test suite
+## ordersテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column          | Type    | Option     |
+|-----------------|---------|------------|
+| order_message   | string  | null: false|
+| template_id     | integer | null: false|
+| category_id     | integer | null: false|
+|  order_message  | string  | null: false|
 
-* Deployment instructions
-
-* ...
+### Association
+belongs_to :template
+belongs_to :user
