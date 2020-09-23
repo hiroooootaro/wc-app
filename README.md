@@ -39,3 +39,4 @@ has_one :order
 ### Association
 belongs_to :template
 belongs_to :user
+
