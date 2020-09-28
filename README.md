@@ -20,6 +20,7 @@ has_many :orders
 | category        | integer | null: false|
 | image           | string  | null: false|
 | view_name       | string  | null: false|
+| view_type       | integer | null: false|
 
 
 ### Association
