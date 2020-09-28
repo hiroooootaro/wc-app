@@ -160,9 +160,7 @@
   <%# /一覧 %>
 </div>
 <div class='exhibit-btn'>
-  <span class='exhibit-text'>出品する</span>
-  <a href="#">
+  <%=link_to "出品する", new_template_path, class: 'exhibit-text'%>
     <%= image_tag 'camera.png' , size: '185x50' ,class: "exhibit-icon" %>
-  </a>
 </div>
 <%= render "shared/footer" %>
