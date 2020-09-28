@@ -44,7 +44,7 @@
           で使いやすい
         </h3>
         <p class='reason-list-description'>
-          めんどくさい入力は必要なく、検索も購入もスムーズ！
+          めんどくさい入力は必要なく、検索もスムーズ！
         </p>
       </li>
       <li class='list'>
@@ -71,7 +71,7 @@
       WEB MAKERは、
     </p>
     <p class='ad-explain'>
-      出品・購入回数も業界最多です！
+      注文数も業界最多です！
     </p>
     <p class='ad-explain'>
       あなただけのWEBサイトが作れます！
@@ -95,7 +95,7 @@
           簡単に売り買いできる
         </h3>
         <p class='feature-list-description'>
-          スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+          スマホひとつで自分だけのホームページができる
         </p>
       </li>
       <li class='list'>
@@ -120,28 +120,28 @@
   </div>
   <%# /WEB MAKERの特徴 %>
 
-  <%# 商品一覧 %>
+  <%# 一覧 %>
   <div class='item-contents'>
     <h2 class='title'>ピックアップカテゴリー</h2>
-    <%= link_to '新規投稿商品', "#", class: "subtitle" %>
+    <%= link_to '新規テンプレート投稿', "#", class: "subtitle" %>
     <ul class='item-lists'>
 
-      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+      <%# テンプレートのインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
       <li class='list'>
         <%= link_to "#" do %>
         <div class='item-img-content'>
           <%= image_tag "web-sample.png", class: "item-img" %>
 
-          <%# 商品が売れていればsold outを表示しましょう %>
+          <%# テンプレートが予約されていればReserved!!を表示しましょう %>
           <div class='sold-out'>
             <span>Reserved!!</span>
           </div>
-          <%# //商品が売れていればsold outを表示しましょう %>
+          <%# //テンプレートが売れていればsold outを表示しましょう %>
 
         </div>
         <div class='item-info'>
           <h3 class='item-name'>
-            <%= "商品名" %>
+            <%= "テンプレート名" %>
           </h3>
           <div class='item-price'>
             <span><%= "販売価格" %>円<br>(税込み)</span>
@@ -153,11 +153,11 @@
         </div>
         <% end %>
       </li>
-      <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+      <%# //テンプレートのインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
 
     </ul>
   </div>
-  <%# /商品一覧 %>
+  <%# /一覧 %>
 </div>
 <div class='exhibit-btn'>
   <span class='exhibit-text'>出品する</span>
@@ -165,4 +165,4 @@
     <%= image_tag 'camera.png' , size: '185x50' ,class: "exhibit-icon" %>
   </a>
 </div>
-<%#= render "shared/footer" %>
+<%= render "shared/footer" %>
