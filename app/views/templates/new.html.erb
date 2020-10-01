@@ -21,7 +21,7 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :hoge, id:"templates-image" %>
+        <%= f.file_field :template_image, id:"templates-image" %>
       </div>
     </div>
     <%# /テンプレート画像 %>
@@ -32,7 +32,7 @@
           テンプレートの説明
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :hoge, class:"templates-text", id:"templates-info", placeholder:"カテゴリーなどテンプレートについての説明（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :template_explain, class:"templates-text", id:"templates-info", placeholder:"カテゴリーなどテンプレートについての説明（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
     <%# テンプレート説明 %>
@@ -45,7 +45,7 @@
           カテゴリー
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"templates-category"}) %>
+        <%= f.collection_select(:category, [], :hoge, :hoge, {}, {class:"select-box", id:"templates-category"}) %>
       </div>
     </div>
     <%# /テンプレートの詳細 %>
