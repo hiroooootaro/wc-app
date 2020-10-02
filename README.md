@@ -16,11 +16,11 @@ has_many :orders
 
 | Column          | Type    | Option     |
 |-----------------|---------|------------|
-| view_file       | string  | null: false|
-| category        | integer | null: false|
-| image           | string  | null: false|
-| view_name       | string  | null: false|
-| view_type       | integer | null: false|
+| template_explain| string  | null: false|
+| category        | bigint  | null: false|
+| template_image  | string  | null: false|
+| user_id         | bigint  | null: false|
+
 
 
 ### Association
